@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.API", "ContactBook.API\ContactBook.API.csproj", "{F41791C5-D76A-4A64-8FC1-4D2F78E9D5EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F41791C5-D76A-4A64-8FC1-4D2F78E9D5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41791C5-D76A-4A64-8FC1-4D2F78E9D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41791C5-D76A-4A64-8FC1-4D2F78E9D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41791C5-D76A-4A64-8FC1-4D2F78E9D5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFF2A80B-7DA7-40F7-8CC7-5C5F4939FE2D}
+	EndGlobalSection
+EndGlobal
