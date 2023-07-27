@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ContactBook.API.Model.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContactBook.API.Data
 {
-    public class ContactBookDbContext:IdentityDbContext
+    public class ContactBookDbContext:IdentityDbContext<AppUser>
     {
         public ContactBookDbContext( DbContextOptions<ContactBookDbContext>options):base(options) 
         {
@@ -13,5 +14,6 @@ namespace ContactBook.API.Data
             base.OnModelCreating(builder);
 
         }
+        public DbSet<AppUser>AppUsers { get; set; }
     }
 }

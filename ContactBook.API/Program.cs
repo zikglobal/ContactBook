@@ -1,5 +1,8 @@
 using ContactBook.API.Data;
+using ContactBook.API.Mapping;
 using ContactBook.API.Model.Domain;
+using ContactBook.API.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +14,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ContactBookDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ContacBookConnectionstring")));
 
+builder.Services.AddScoped<IAppUserRepository, SQLAppUserRepository>();
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
 //for identity
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<ContactBookDbContext>()
     .AddDefaultTokenProviders();
+
+//for authenticatin 
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+});
 
 
 builder.Services.AddControllers();

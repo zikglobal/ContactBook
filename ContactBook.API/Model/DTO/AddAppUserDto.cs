@@ -1,6 +1,6 @@
 ﻿namespace ContactBook.API.Model.DTO
 {
-    public class AppUserDto
+    public class AddAppUserDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
